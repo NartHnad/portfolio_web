@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio của {{NAME}} — thành viên nhóm 4.">
+  <title>{{NAME}} | Portfolio cá nhân</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/member-tabs.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Đến nội dung chính</a>
+  <header><nav class="container nav" aria-label="Điều hướng chính">
+    <a class="brand" href="../index.html">Nhóm<span> Portfolio.</span></a>
+  </nav></header>
+  <main class="container" id="main">
+    <section class="profile-hero" aria-labelledby="profile-title">
+      <a class="back-link" href="../index.html#members">← Trở về danh sách thành viên</a>
+      <div class="profile-intro">
+        <!-- Ảnh được tự động tải từ ../assets/{{ID}}.jpg hoặc ../assets/{{ID}}.png. -->
+        <div class="avatar profile-avatar" data-student-id="{{ID}}" data-student-name="{{NAME}}" aria-hidden="true">{{INITIALS}}</div>
+        <div><span class="eyebrow">Portfolio cá nhân</span><h1 id="profile-title">{{NAME}}</h1><span class="student-id">MSSV · {{ID}}</span><p><!-- TODO: Viết một câu giới thiệu ngắn. -->Xin chào! Đây là nơi tôi chia sẻ ngắn gọn về bản thân và những điều mình đang theo đuổi.</p></div>
+      </div>
+    </section>
+    <section class="member-details" aria-label="Thông tin của {{NAME}}">
+      <div class="member-detail-grid">
+        <section class="panel" id="about">
+          <span class="eyebrow">Về tôi</span><h2>Một chút về bản thân</h2>
+          <!-- TODO: Thay bằng 2–3 câu về sở thích, điểm mạnh và định hướng. -->
+          <p>Thông tin đang được cập nhật. Tôi sẽ chia sẻ về sở thích, điểm mạnh và mục tiêu học tập của mình tại đây.</p>
+          <ul class="detail-list"><li><strong>Họ và tên</strong><span>{{NAME}}</span></li><li><strong>Mã số sinh viên</strong><span>{{ID}}</span></li><li><strong>Vai trò trong nhóm</strong><span>Chưa cập nhật</span></li></ul>
+        </section>
+        <section class="panel" id="skills">
+          <span class="eyebrow">Năng lực</span><h2>Kỹ năng của tôi</h2>
+          <!-- TODO: Thay các nhãn bằng kỹ năng thật và thêm một câu mô tả ngắn. -->
+          <p>Tôi đang học hỏi và phát triển các kỹ năng phục vụ việc xây dựng website.</p>
+          <div class="skill-list"><span class="tag">Kỹ năng 01</span><span class="tag">Kỹ năng 02</span><span class="tag">Kỹ năng 03</span></div>
+        </section>
+        <section class="panel" id="journey">
+          <span class="eyebrow">Cột mốc</span><h2>Học tập & trải nghiệm</h2>
+          <!-- TODO: Thay bằng các mốc thời gian thật. -->
+          <ul class="detail-list"><li><strong>Thời gian — chưa cập nhật</strong><span>Một dấu mốc học tập hoặc hoạt động đáng nhớ.</span></li><li><strong>Thời gian — chưa cập nhật</strong><span>Một trải nghiệm, thành tích hoặc dự án đã thực hiện.</span></li></ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="profile-section" id="projects">
+      <div class="section-heading"><div><span class="eyebrow">Dự án</span><h2>Dự án chung của nhóm</h2></div><p>Nhóm sẽ bổ sung sản phẩm sau khi hoàn thiện.</p></div>
+      <div class="panel empty-section"><div class="project-placeholder" aria-hidden="true">＋</div><h3>Đang chờ cập nhật</h3><p>Thông tin, hình ảnh và đường dẫn dự án sẽ xuất hiện tại đây.</p></div>
+    </section>
+
+    <section class="profile-section" id="contact">
+      <div class="section-heading"><div><span class="eyebrow">Kết nối</span><h2>Liên hệ với tôi</h2></div></div>
+      <div class="panel contact-list">
+        <!-- TODO: Thay bằng thông tin liên hệ muốn công khai. -->
+        <p><strong>Điện thoại</strong><br><span data-contact="phone">Chưa cập nhật</span></p>
+        <p><strong>Email</strong><br><span data-contact="email">Chưa cập nhật</span></p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span>{{NAME}} · {{ID}}</span><a class="text-link" href="../index.html#members">Gặp các thành viên khác →</a></div></footer>
+</body>
+</html>

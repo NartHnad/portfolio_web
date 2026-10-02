@@ -1,0 +1,150 @@
+.profile-tabs {
+  padding-bottom: 55px;
+}
+
+.member-details {
+  padding-bottom: 55px;
+}
+
+.member-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.member-detail-grid .panel {
+  min-width: 0;
+}
+
+.profile-avatar {
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.tab-list {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  margin-bottom: 18px;
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  scrollbar-width: thin;
+}
+
+.tab-list button {
+  flex: 1;
+  min-width: max-content;
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 18px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tab-list button:hover {
+  color: var(--accent);
+  background: var(--soft);
+}
+
+.tab-list button[aria-selected="true"] {
+  color: #fff;
+  background: var(--accent);
+}
+
+.tab-panels {
+  min-height: 330px;
+}
+
+.tab-panel {
+  max-width: 850px;
+  margin: auto;
+}
+
+.tab-panel h2 {
+  margin: 5px 0 12px;
+}
+
+.tab-panel[hidden] {
+  display: none;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.profile-section {
+  padding: 15px 0 55px;
+}
+
+.profile-section .section-heading {
+  margin-bottom: 18px;
+}
+
+.empty-section {
+  text-align: center;
+}
+
+.empty-section .project-placeholder {
+  max-width: 190px;
+  margin: 0 auto 18px;
+}
+
+.profile-section .contact-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.profile-section .contact-list a {
+  font-weight: 700;
+}
+
+.tabs-ready .tab-panel {
+  animation: tab-in 0.22s ease-out;
+}
+
+@keyframes tab-in {
+  from { opacity: 0.3; transform: translateY(5px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 680px) {
+  .profile-tabs { padding-bottom: 40px; }
+  .profile-section { padding: 5px 0 40px; }
+  .profile-section .contact-list { grid-template-columns: 1fr; }
+  .tab-list {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 8px 16px;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+  .tab-list button { flex: 0 0 auto; padding: 10px 15px; }
+  .tab-panels { min-height: 0; }
+  .tab-panel { padding: 22px; }
+  .profile-intro .avatar { width: 88px; height: 88px; font-size: 30px; }
+  .profile-intro h1 { font-size: 32px; }
+  .profile-hero { padding-bottom: 26px; }
+  .back-link { margin-bottom: 22px; }
+  .member-detail-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 681px) and (max-width: 950px) {
+  .member-detail-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabs-ready .tab-panel { animation: none; }
+}
