@@ -16,11 +16,7 @@ caddy run
 
 Sau đó mở `http://localhost:8080`. Caddy dùng file `Caddyfile` để phục vụ toàn bộ website tĩnh, bao gồm các trang trong `members/`, CSS, JavaScript và ảnh trong `assets/`.
 
-Kiểm tra cấu hình trước khi chạy (tùy chọn):
-
-```powershell
-caddy validate --config Caddyfile
-```
+Tải qua: winget install --id CaddyServer.Caddy -e rồi add vào env variable. (Nhớ reload vscode).
 
 ## Phân chia file
 
