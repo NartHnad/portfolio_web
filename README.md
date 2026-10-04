@@ -6,6 +6,22 @@ Website tĩnh sử dụng HTML, CSS và JavaScript thuần. Không cần cài th
 
 Mở `index.html` trong trình duyệt. Có thể dùng Live Server trong VS Code nếu muốn tự tải lại khi chỉnh sửa.
 
+### Dùng Caddy
+
+Từ thư mục gốc của dự án, chạy:
+
+```powershell
+caddy run
+```
+
+Sau đó mở `http://localhost:8080`. Caddy dùng file `Caddyfile` để phục vụ toàn bộ website tĩnh, bao gồm các trang trong `members/`, CSS, JavaScript và ảnh trong `assets/`.
+
+Kiểm tra cấu hình trước khi chạy (tùy chọn):
+
+```powershell
+caddy validate --config Caddyfile
+```
+
 ## Phân chia file
 
 | Thành viên | MSSV | Trang cá nhân |
